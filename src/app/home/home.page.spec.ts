@@ -4,6 +4,7 @@ import { IonicModule } from '@ionic/angular';
 import { HomePage } from './home.page';
 import {Geolocation} from '@ionic-native/geolocation/ngx';
 import {RouterTestingModule} from '@angular/router/testing';
+import {LocalNotifications} from '@ionic-native/local-notifications/ngx';
 
 describe('HomePage', () => {
   let component: HomePage;
@@ -13,7 +14,7 @@ describe('HomePage', () => {
     TestBed.configureTestingModule({
       declarations: [ HomePage ],
       imports: [IonicModule.forRoot(), RouterTestingModule],
-      providers: [Geolocation] // **Like this.**
+      providers: [LocalNotifications, Geolocation] // **Like this.**
     }).compileComponents();
 
     fixture = TestBed.createComponent(HomePage);
