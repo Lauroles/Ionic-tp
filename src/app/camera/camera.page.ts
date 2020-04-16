@@ -23,7 +23,7 @@ export class CameraPage implements OnInit {
 
     const cameraPreviewOpts: CameraPreviewOptions = {
       x: 0,
-      y: 0,
+      y: 40,
       width: window.screen.width,
       height: window.screen.height,
       camera: 'rear',
@@ -40,5 +40,9 @@ export class CameraPage implements OnInit {
         (err) => {
           console.log(err);
         });
+  }
+
+  stopCamera() {
+    this.cameraPreview.stopCamera();
   }
 }
