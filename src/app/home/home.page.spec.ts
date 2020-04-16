@@ -2,6 +2,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
 import { HomePage } from './home.page';
+import {Geolocation} from '@ionic-native/geolocation/ngx';
+import {RouterTestingModule} from '@angular/router/testing';
 
 describe('HomePage', () => {
   let component: HomePage;
@@ -10,8 +12,8 @@ describe('HomePage', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ HomePage ],
-      imports: [IonicModule.forRoot()],
-      providers: [HomePage] // **Like this.**
+      imports: [IonicModule.forRoot(), RouterTestingModule],
+      providers: [Geolocation] // **Like this.**
     }).compileComponents();
 
     fixture = TestBed.createComponent(HomePage);
