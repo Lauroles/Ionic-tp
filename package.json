@@ -10,7 +10,7 @@
     "build:android": "ionic cordova build android --prod --release",
     "prepare:android": "ionic cordova prepare android --prod --no-build",
     "emulate:android": "npm run prepare:android && ionic cordova emulate android --prod --target=Pixel_3_XL_API_28",
-    "test": "ng test --code-coverage",
+    "test" : "./node_modules/.bin/karma start karma.conf.js",
     "test:local": "ng test --code-coverage --watch --browsers=Chrome",
     "lint": "ng lint",
     "e2e": "ng e2e"

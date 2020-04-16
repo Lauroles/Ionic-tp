@@ -24,7 +24,16 @@ module.exports = function (config) {
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
+
     browsers: ['ChromeHeadless'],
-    singleRun: true
+    singleRun: true,
+    browsers: ['Chrome_no_sandbox'],
+    customLaunchers: {
+      Chrome_no_sandbox: {
+        base: 'Chrome',
+        flags: ['--no-sandbox', '--headless', '--disable-gpu', '--remote-debugging-port=9222', '--single-run']
+      }
+    }
   });
 };
+
