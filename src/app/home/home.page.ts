@@ -44,9 +44,9 @@ export class HomePage {
   async fireAlert() {
     // creation de l alerte
     const alert = await this.alertController.create({
-      header: 'Alert',
-      subHeader: 'Subtitle',
-      message: 'This is an alert message.',
+      header: 'Pop-up',
+      subHeader: 'Pop-up',
+      message: 'Je suis une pop-up.',
       buttons: ['OK']
     });
     // quand l alerte sera masquée
